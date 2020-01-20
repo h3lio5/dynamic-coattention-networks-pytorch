@@ -25,6 +25,7 @@ All dependencies required by this repository can be downloaded by creating a vir
 python3 -m venv .env
 source .env/bin/activate
 pip install -r requirements.txt
+pip install -e .
 ```
 All the data required to train and evaluate can be downloaded and preprocessed by running      
 ``` Batchfile
