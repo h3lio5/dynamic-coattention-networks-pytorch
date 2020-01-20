@@ -11,7 +11,7 @@ Several deep learning models have been proposed for question answering. How- eve
 ### Coattention Encoder         
 ![Coattention Encoder](images/Coattention.png)
 ### Dynamic Decoder        
-![Dynamic_Decoder](images/Dynamic_decoder.png)
+<img src="images/dynamic_decoder.png width=410>
 ### Highway Maxout Network          
 ![HMN](images/HMN.png)
   
