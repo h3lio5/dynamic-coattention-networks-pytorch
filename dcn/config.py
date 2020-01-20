@@ -1,16 +1,42 @@
 import os
 
+ROOT = os.getcwd()
 
-class Config:
+
+class GeneralConfig:
     """
+    General configuration
     """
 
     def __init__(self):
+
         self.context_len = 600
         self.question_len = 30
+        self.word_emb_path = os.path.join(
+            ROOT, "dcn", "glove", "word_embeddings.npy")
+        self.word2id_path = os.path.join(ROOT, "dcn", "glove", "word2id.pkl")
+        self.id2word_path = os.path.join(ROOT, "dcn", "glove", "id2word.pkl")
+        self.word_emb_text_path = os.path.join(
+            ROOT, "dcn", "glove", "glove.6B.300d.txt")
+        self.model_save_path = os.path.join(ROOT, "dcn", "checkpoints")
+        self.data_dir_path = os.path.join(ROOT, "dcn", "data")
+        self.train_context_data_path = os.path.join(
+            ROOT, "dcn", "data", "train.context")
+        self.train_question_data_path = os.path.join(
+            ROOT, "dcn", "data", "train.question")
+        self.train_answer_span_data_path = os.path.join(
+            ROOT, "dcn", "data", "train.span")
+
+
+class ModelConfig:
+    """
+    Model configuration
+    """
+
+    def __init__(self):
 
         self.hidden_dim = 200
-        self.embedding_dim = 100
+        self.embedding_dim = 300
 
         # vector with zeros for unknown words
         self.decoding_steps = 4
