@@ -9,8 +9,11 @@ Several deep learning models have been proposed for question answering. How- eve
 ### Overview  
 ![Overview](images/overview.png)   
 ### Coattention Encoder         
-### Dynamic Decoder         
+![Coattention Encoder](images/Coattention.png)
+### Dynamic Decoder        
+![Dynamic_Decoder](images/Dynamic_decoder.png)
 ### Highway Maxout Network          
+![HMN](images/HMN.png)
   
 ## Setup Instructions and Dependencies
 You may setup the repository on your local machine by either downloading it or running the following line on `terminal`.
