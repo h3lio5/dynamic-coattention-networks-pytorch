@@ -30,3 +30,15 @@ All the data required to train and evaluate can be downloaded and preprocessed b
 ``` Batchfile
 python dcn/utils/preprocess.py
 ```
+## 2. Training Model from Scratch
+To train your own model from scratch, run
+
+```Batchfile
+python train.py 
+```
++ The parameters for your experiment are all set by defualt. But you are free to set them on your own by changing them in       the `config.py` file..
++ The training script will create a folder **checkpoints** as specified in your `config.py` file.
++ This folder will contain all model parameters saved after each epoch.
+
+### TODO
+[] Model Evaluation
