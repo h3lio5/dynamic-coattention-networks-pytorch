@@ -52,16 +52,16 @@ This repository contains the following files and folders
 
 ## 4.Model Architecture
 
-### 1.Overview  
+* ### Overview  
 ![Overview](images/overview.png)   
 
-### 2.Coattention Encoder         
+* ### Coattention Encoder         
 ![Coattention Encoder](images/Coattention.png)
 
-### 3.Dynamic Decoder        
+* ### Dynamic Decoder        
 ![Dynamic_Decoder](images/dynamic_decoder.png)
 
-### 4.Highway Maxout Network          
+* ### Highway Maxout Network          
 ![HMN](images/HMN.png)
 
 ## 5.TODO
