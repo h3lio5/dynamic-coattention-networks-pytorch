@@ -66,3 +66,5 @@ This repository contains the following files and folders
 
 ## 5.TODO
 [ ] Model Evaluation
+### 6.Resources
+Took reference from this repo [link](https://github.com/atulkum/co-attention).
