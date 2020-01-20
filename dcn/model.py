@@ -10,6 +10,8 @@ config = Config()
 
 class DCN(nn.Module):
     """
+    Dynamic Coattention Network
+
     """
 
     def __init__(self, weights, mode='train'):
