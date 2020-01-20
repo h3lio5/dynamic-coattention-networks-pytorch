@@ -24,6 +24,7 @@ import numpy as np
 from tqdm import tqdm
 from urllib.request import urlretrieve
 import ssl
+from dcn.config import GeneralConfig
 
 
 random.seed(39)
@@ -255,38 +256,40 @@ def read_prepro_write_dataset(dataset, split, output_directory):
 
 def main():
 
-    print("Will download SQuAD datasets to {}".format(args.data_dir))
-    print("Will put preprocessed SQuAD datasets in {}".format(args.data_dir))
+    print("Will download SQuAD datasets to {}".format(config.data_dir_path))
+    print("Will put preprocessed SQuAD datasets in {}".format(config.data_dir_path))
 
-    if not os.path.exists(args.data_dir):
-        os.makedirs(args.data_dir)
+    if not os.path.exists(config.data_dir_path):
+        os.makedirs(config.data_dir_path)
 
     train_filename = "train-v1.1.json"
     dev_filename = "dev-v1.1.json"
 
     # download train set
-    maybe_download(SQUAD_BASE_URL, train_filename, args.data_dir, 30288272)
+    maybe_download(SQUAD_BASE_URL, train_filename,
+                   config.data_dir_path, 30288272)
 
     # read train set
-    train_data = data_from_json(os.path.join(args.data_dir, train_filename))
+    train_data = data_from_json(os.path.join(
+        config.data_dir_path, train_filename))
     print("Train data has {} examples total".format(total_exs(train_data)))
 
     # preprocess train set and write to file
-    read_prepro_write_dataset(train_data, 'train', args.data_dir)
+    read_prepro_write_dataset(train_data, 'train', config.data_dir_path)
 
     # download dev set
-    maybe_download(SQUAD_BASE_URL, dev_filename, args.data_dir, 4854279)
+    maybe_download(SQUAD_BASE_URL, dev_filename, config.data_dir_path, 4854279)
 
     # read dev set
-    dev_data = data_from_json(os.path.join(args.data_dir, dev_filename))
+    dev_data = data_from_json(os.path.join(config.data_dir_path, dev_filename))
     print("Dev data has {} examples total".format(total_exs(dev_data)))
 
     # preprocess dev set and write to file
-    read_prepro_write_dataset(dev_data, 'dev', args.data_dir)
+    read_prepro_write_dataset(dev_data, 'dev', config.data_dir_path)
 
 
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser()
-    parser.add_argument("--data_dir", required=True)
-    args = parser.parse_args()
+    config = GeneralConfig()
+    if os.path.exists(config.data_dir_path):
+        os.mkdir(config.data_dir_path)
     main()
