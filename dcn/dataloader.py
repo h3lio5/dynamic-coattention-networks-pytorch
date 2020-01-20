@@ -64,4 +64,4 @@ class SquadDataset(Dataset):
             question, max_len=config.question_len)
         answer_span = self.answer_span_data[index]
 
-        return LT(context_ids), LT([context_len]), LT(question_ids), LT([question_len]), LT(answer_span)
+        return (LT(context_ids), LT([context_len]), LT(question_ids), LT([question_len]), LT(answer_span))
