@@ -48,6 +48,8 @@ This repository contains the following files and folders
 
 8. `dcn/utils/vocab.py`: Contains code to generate vocabulary and word embeddings.
 
+9. `dcn/config.py` : Contains information about various file paths and model configurations.
+
 ## 4.Model Architecture
 
 ### 1.Overview  
