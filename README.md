@@ -6,7 +6,8 @@ Several deep learning models have been proposed for question answering. How- eve
 
 ## Model Architecture
 
-### Overview     
+### Overview  
+![Overview](images/overview.png)   
 ### Coattention Encoder         
 ### Dynamic Decoder         
 ### Highway Maxout Network          
