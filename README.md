@@ -40,6 +40,23 @@ python train.py
 + The parameters for your experiment are all set by defualt. But you are free to set them on your own by changing them in       the `config.py` file..
 + The training script will create a folder **checkpoints** as specified in your `config.py` file.
 + This folder will contain all model parameters saved after each epoch.
+## Repository Overview
+This repository contains the following files and folders
 
-### TODO
-[] Model Evaluation
+1. **images**: Contains media for `readme.md`.
+
+2. `dcn/data_loader.py`: Contains helper functions that load data.
+
+3. `generate.py`: Used to generate style transfered text from trained models.
+
+4. `dcn/model.py`: Contains helper functions that create generator and discriminator models.
+
+5. `requirements.txt`: Lists dependencies for easy setup in virtual environments.
+
+6. `train.py`: Contains code to train models from scratch.
+
+7. `dcn/utils/preprocess.py`: Contains code to download and preprocess data.
+
+8. `dcn/utils/vocab.py`: Contains code to generate vocabulary and word embeddings.
+## TODO
+[ ] Model Evaluation
